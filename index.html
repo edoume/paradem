@@ -4,13 +4,33 @@
 	<meta charset="utf-8">
 	<title>Twitter Bootstrap Parallax Demo</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/custom.css" rel="stylesheet" media="screen">
+
+	
 	<script src="js/jquery-1.6.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/init.js"></script>
+	<script src="js/init.js"></script> <!-- Code du Caroussel -->
+	<script src="js/owl.js"></script>
 
+    <!-- Owl Caroussel + js/own.js au dessus  -->
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+     
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+     
+    <!-- jQuery 1.7+ -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+     
+    <!-- Include js plugin -->
+    <script src="owl-carousel/owl.carousel.js"></script>
+
+
+
+	<!-- CSS DU PARALLAX -->
 	<style type="text/css">
 		#intro { 
-			background: url(images/intro.png) 50% 0 fixed; 
+			background: url(images/bluegrid.png) 50% 0 fixed; 
 			height: auto;  
 			margin: 0 auto; 
 		    width: 100%; 
@@ -19,7 +39,7 @@
 		    padding: 100px 0;
 		}
 		#home { 
-			background: url(images/home.jpg) 50% 0 fixed; 
+			background: url(images/graygrid.png) 50% 0 fixed; 
 			height: auto;  
 			margin: 0 auto; 
 		    width: 100%; 
@@ -27,8 +47,8 @@
 		    box-shadow: 0 0 50px rgba(0,0,0,0.8);
 		    padding: 200px 0;
 		}
-		#about { 
-			background: url(images/about.png) 50% 0 fixed; 
+		#caroussel { 
+			background: url(images/orangegrid.png) 50% 0 fixed; 
 			height: auto;
 			margin: 0 auto; 
 		    width: 100%; 
@@ -57,19 +77,28 @@
 	<div class="navbar navbar-inverse navbar-fixed-top">
 	  <div class="navbar-inner">
 	  	<div class="container">
-		    <a class="brand" href="#">Parallax Demo</a>
+		    <a class="brand" href="#">WEBSITENAME</a>
 		    <ul class="nav">
 		      <li class="active"><a href="#intro">INTRO</a></li>
 		      <li><a href="#home">HOME</a></li>
-		      <li><a href="#about">ABOUT</a></li>
+		      <li><a href="#caroussel">CAROUSSEL</a></li>
 		    </ul>
 		</div>
 	  </div>
 	</div>
 
 	<!-- Section #1 -->
-	<section id="intro" data-speed="6" data-type="background">
+	<section id="intro" data-speed="10" data-type="background">
 		<div class="container">
+			<h1>Bienvenue</h1>
+			<h4>Vous souhaitez approfondir vos connaisances ou découvrir une technologie novatrice.<br>Accédez à nos formations courtes ou demandez une formation sur mesure selon vos besoins.</h4>
+			<button type="button" class="btn btn-default">Découvrir les formations</button>
+		</div>
+	</section>
+
+	<!-- Section #2 -->
+	<section id="home" data-speed="9" data-type="background">
+			<div class="container">
 	    	<div class="hero-unit">
 	    		<h2>info PARALLAX</h2>
 	    		<p>data-speed="0" et l'image est fixée</p>
@@ -88,25 +117,29 @@
 	    </div>
 	</section>
 
-	<!-- Section #2 -->
-	<section id="home" data-speed="9" data-type="background">
-			<div class="container">
-	    	<div class="hero-unit">
-	    		<h2>HOME</h2>
-	    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	    		tempor incididunt ut labore et dolore magna aliqua.</p>
-	    	</div>
-	    </div>
-	</section>
-
 	<!-- Section #3 -->
-	<section id="about" data-speed="2" data-type="background">
+	<section id="caroussel" data-speed="2" data-type="background">
 		<div class="container">
-	    	<div class="hero-unit">
-	    		<h2>ABOUT</h2>
-	    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	    		tempor incididunt ut labore et dolore magna aliqua.</p>
-	    	</div>
+	    	<h1>Caroussel OWL</h1>
+
+
+
+
+	    <div id="owl-demo" class="owl-carousel owl-theme">
+		     
+	    <div class="item"><img src="images/s1.jpeg" alt="Vide"></div>
+	    <div class="item"><img src="images/s2.jpeg" alt="Vide"></div>
+	    <div class="item"><img src="images/s3.jpeg" alt="Vide"></div>
+	    <div class="item"><img src="images/s4.jpeg" alt="Vide"></div>
+	    <div class="item"><img src="images/s5.jpeg" alt="Vide"></div>
+	    <div class="item"><img src="images/s6.jpeg" alt="Vide"></div>
+		     
+		    </div>
+
+
+
+
+
 	    </div>
 	</section>
 
